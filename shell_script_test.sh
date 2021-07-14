@@ -5,3 +5,16 @@ then
       exit
 fi
 
+terminal='tty'
+
+exec < $fname
+
+count=1
+while read line
+do 
+  echo $count.$line
+  count='expr $count + 1'
+
+done
+
+exec
