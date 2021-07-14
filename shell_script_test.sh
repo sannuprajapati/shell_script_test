@@ -1,4 +1,4 @@
-echo "enter input file name:\c"
+echo "enter input file name (with file extension):\c"
 read fname
 
 
