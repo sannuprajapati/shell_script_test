@@ -18,7 +18,7 @@ exec < $fname
 while read line
 do 
       echo $line
-   sed 's/hate/love/g' t1.txt
+   sed 's/hate/love/g' $fname
 done 
 
 
