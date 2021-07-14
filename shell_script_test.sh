@@ -1,30 +1,27 @@
 echo "enter input file name:\c"
-read fin
-echo "enter output file  name:\c"
-read fout
-echo "enter a file name:\c"
-read R_word
-echo "enter a file name:\c"
-read N_word
+read fname
 
 
-if [ -z "$fin"]
+# validateing input file exist or not
+if [ -z "$fname" ]
 then
-      exit
+       exit
 fi
 
+
+# stores setting in variable terminal
 terminal='tty'
 
-exec < $fin
+exec < $fname
 
-count=1
+
 while read line
 do 
-  echo $count.$line
-  count='expr $count + 1'
-  sed  's /$R_word/$N_word /g' $fin
+      echo $line
+   sed 's/hate/love/g' t1.txt
+done 
 
-done
+
 
 
 
